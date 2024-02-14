@@ -1,0 +1,10 @@
+// EMF.h
+
+#pragma once
+#include <functional>
+
+template<typename Func, typename... Args>
+int has_errors(Func func_ptr, Args&&... args)
+{
+  return func_ptr(std::forward<Args>(args)...);
+}
