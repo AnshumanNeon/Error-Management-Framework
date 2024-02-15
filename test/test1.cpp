@@ -8,8 +8,12 @@ bool func(int a, int b)
 
 int main()
 {
-  if(has_errors(func, 2, 3) > 0)
-    printf("Hello");
+  unsigned int* emf_ptr = init_emf(1);
+  has_errors(emf_ptr, func, 1, 3);
+
+  unsigned int emf = *emf_ptr;
+  free_emf(emf_ptr);
+  if(emf > 0) printf("Hello\n");
   
   return 0;
 }
