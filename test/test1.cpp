@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "include/emf.h"
+#include "../include/emf.h"
 
 bool func(int a, int b)
 {
